@@ -2,75 +2,191 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Math'Clic</title>
+  <title>Plateforme de Mathématiques</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
     body {
-      font-family: Arial;
-      margin: 0;
-      background: #f4f7ff;
-      color: #222;
+      background: linear-gradient(135deg, #eef3ff, #ffffff);
+      color: #1f1f1f;
     }
 
-    header {
-      background: #2d6cdf;
-      color: white;
-      padding: 40px;
+    /* HERO */
+    .hero {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
+      padding: 20px;
     }
 
-    h1 {
-      margin: 0;
-      font-size: 40px;
+    .hero h1 {
+      font-size: 48px;
+      color: #1e3a8a;
+      margin-bottom: 20px;
     }
 
-    .container {
-      padding: 30px;
-      max-width: 900px;
+    .hero p {
+      font-size: 20px;
+      max-width: 700px;
+      color: #444;
+      line-height: 1.6;
+      margin-bottom: 30px;
+    }
+
+    .btn {
+      background: #2563eb;
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background: #1e40af;
+      transform: scale(1.05);
+    }
+
+    /* SECTIONS */
+    .section {
+      max-width: 1000px;
       margin: auto;
+      padding: 60px 20px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #1e3a8a;
     }
 
     .card {
       background: white;
       padding: 20px;
-      margin: 15px 0;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+      margin-bottom: 20px;
     }
 
-    .btn {
-      display: inline-block;
-      padding: 10px 20px;
-      background: #2d6cdf;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    ul {
+      margin-left: 20px;
       margin-top: 10px;
+      line-height: 1.8;
     }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 30px;
+      color: #666;
+      font-size: 14px;
+    }
+
   </style>
 </head>
 
 <body>
 
-<header>
-  <h1>Math'Up 📐</h1>
-  <p>Le déclic pour réussir en maths !</p>
-</header>
+  <!-- HERO -->
+  <div class="hero">
+    <h1>Maîtrise les Mathématiques</h1>
 
-<div class="container">
+    <p>
+      Une plateforme dédiée à l’apprentissage des mathématiques pour les collégiens, lycéens et étudiants.
+      Des cours personnalisés, des corrections détaillées et un suivi de progression pour t’aider à comprendre
+      et non simplement apprendre.
+    </p>
 
-  <div class="card">
-    <h2>📚 Cours de mathématiques</h2>
-    <p>Du collège au lycée, les fondamentaux.</p>
-    <a class="btn" href="#">Commencer</a>
+    <a href="#reservation" class="btn">Réserver</a>
   </div>
 
-  <div class="card">
-    <h2>🧠 Réservation</h2>
-    <p>Cet espace te permet de réserver le premier cours.</p>
-    <a class="btn" href="#">Réserver</a>
+  <!-- PRESENTATION -->
+  <div class="section">
+    <h2>📘 Un accompagnement personnalisé</h2>
+
+    <div class="card">
+      <p>
+        Notre objectif est de rendre les mathématiques accessibles à tous grâce à une approche adaptée à chaque élève.
+        Nous ne donnons pas seulement des réponses : nous expliquons la logique et la méthode.
+      </p>
+    </div>
   </div>
 
-</div>
+  <!-- PUBLIC -->
+  <div class="section">
+    <h2>🎯 Public visé</h2>
+
+    <div class="card">
+      <h3>Collège</h3>
+      <ul>
+        <li>Calcul numérique</li>
+        <li>Fractions</li>
+        <li>Proportionnalité</li>
+        <li>Équations</li>
+        <li>Statistiques</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Lycée</h3>
+      <ul>
+        <li>Fonctions</li>
+        <li>Suites</li>
+        <li>Probabilités</li>
+        <li>Dérivation</li>
+        <li>Géométrie dans l’espace</li>
+      </ul>
+    </div>
+
+    <div class="card">
+      <h3>Étudiants</h3>
+      <ul>
+        <li>Analyse</li>
+        <li>Algèbre</li>
+        <li>Logique</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- OBJECTIF -->
+  <div class="section">
+    <h2>🚀 Notre objectif</h2>
+
+    <div class="card">
+      <p>
+        Le but de cette plateforme n’est pas seulement de donner des réponses,
+        mais de former des élèves capables de comprendre, raisonner, résoudre et devenir autonomes.
+      </p>
+    </div>
+  </div>
+
+  <!-- RESERVATION -->
+  <div class="section" id="reservation">
+    <h2>📅 Réserver un accompagnement</h2>
+
+    <div class="card" style="text-align:center;">
+      <p>Commence ton accompagnement personnalisé dès maintenant.</p>
+      <br>
+      <a class="btn" href="#">Réserver</a>
+    </div>
+  </div>
+
+  <footer>
+    © 2026 - Plateforme de Mathématiques | Tous droits réservés
+  </footer>
 
 </body>
 </html>
